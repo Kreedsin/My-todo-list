@@ -8,21 +8,21 @@
 
         <form action="/add" method="post">
             <div>
-                <label>Todo task</label>
-                <input type="text" name="task" placeholder="Enter a Task">
-                <button type="submit">Add a Task</button>
+            
+                <input type="text" name="task" placeholder="Enter a Task"><br>
+                <button type="submit" class="btn btn-add">Add a Task</button>
             </div>
         </form>
     <div>
         {% for todo in todo_list %}
         <div class="taskbox">
-        <p>{{todo.id}} : {{todo.task}} (Would you like to <a href="{{ url_for('edit', todo_id=todo.id) }}">Edit?)</a> : {{todo.date.strftime('%Y-%m-%d') }}</p>
+        <p>{{todo.id}} : {{todo.task}} <br>Would you like to <br><a href="{{ url_for('edit', todo_id=todo.id) }}" class="btn btn-edit">edit?</a> <br>{{todo.date.strftime('%Y-%m-%d') }}</p>
         {% if todo.complete==False %}
-        <p>Task Incomplete.<a href="/update/{{todo.id}}"> Mark as complete? </a></p>
-        <p>Would you like to delete the task? <a href="/delete/{{todo.id}}"> Delete </a> </p>
+        <p>Task Incomplete.<br><a href="/update/{{todo.id}}" class="btn btn-update"> Mark as complete? </a></p>
+        <p>Would you like to delete the task? <br><a href="/delete/{{todo.id}}" class="btn btn-delete">Delete </a> </p>
         {% else %}
-        <p>Task Complete.<a href="/update/{{todo.id}}"> Mark as incomplete? </a></p>
-        <p> Would you like to delete the task? <a href="/delete/{{todo.id}}"> Delete </a> </p>
+        <p>Task Complete.<a href="/update/{{todo.id}}" class="btn btn-update"> Mark as incomplete? </a></p>
+        <p> Would you like to delete the task? <a href="/delete/{{todo.id}}" class="btn btn-delete"> <br> Delete </a> </p>
         {% endif %}
     </div>
         {% endfor %}

@@ -33,12 +33,72 @@ h1 {
 }
 
 .taskbox {
+    background-color:#53bbdb;
     border:1px black solid;
-
     margin: 25px;
     box-shadow: 10px 10px 5px grey;
 }
 
 .homebutton {
-    margin-right:95%;
+    margin: 10px;
+}
+
+.homebutton a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Optional: Remove underline from link */
+}
+
+.homebutton img {
+    margin-right: 10px; /* Optional: Adjust space between image and text */
+}
+
+.homebutton h1 {
+    display: inline-block;
+    margin: 0; /* Optional: Remove default margin for better alignment */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.btn-add {
+    background-color: #00ff3c;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
+.btn-update {
+    background-color: #007bff;
+}
+
+.btn-update:hover {
+    background-color: #0056b3;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
 }
