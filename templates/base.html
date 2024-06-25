@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lee's to do list!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <nav>
+    <a href="{{ url_for('home')}}">Home</a>
+    </nav>
+
+    <div class="container">
+    <div class="homebutton"> <a href= "{{ url_for('home')}}" target=""><img src="{{url_for('static', filename='images/kitties.jpg')}}"width ="50px"alt="KITTIES"></a></div>
+    <h2>Welcome to my to do list!</h2>
+    <h3>Feel free to set, edit or delete as task for me!</h3>
+
+    {% block content %}
+
+    {% endblock %}
+</div>
+</body>
+</html>

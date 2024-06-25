@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(66, 65, 70);
+    margin: 0px;
+}
+
+nav{
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a:hover {
+    background-color: #1f657a;
+    color: rgb(211, 15, 15);
+}
+
+.container{
+    width: 50%;
+    margin: 0 auto;
+    min-height: 150vh;
+    background-color: rgb(232, 232, 250);
+    text-align: center;
+    padding-top: 5px;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    margin: 0px;
+}
+
+.taskbox {
+    border:1px black solid;
+
+    margin: 25px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.homebutton {
+    margin-right:95%;
+}
